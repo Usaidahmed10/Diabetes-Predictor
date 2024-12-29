@@ -28,14 +28,14 @@ pip install -r requirements.txt
 ```
 
 ### 3. Train the Model
-**##Option 1:** Train the Model Yourself
+**Option 1:** Train the Model Yourself
 Run the predictor.py file to preprocess the data and train the SVM model:
    ```bash
    python predictor.py
    ```
 This will generate a file named diabetes-pred-model.sav containing the trained model.
 
-**##Option 2:** Download the Pre-trained Model
+**Option 2:** Download the Pre-trained Model
 Save the pre-trained .sav file directly from this link: Download Model.
 Place the downloaded diabetes-pred-model.sav file in the same directory as web_app.py.
 
