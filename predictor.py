@@ -16,6 +16,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn import svm
 from sklearn.metrics import accuracy_score
+import pickle   #for saving the trained model
 
 # loading data
 try:
@@ -68,7 +69,7 @@ input_data_as_numpy_array = np.asarray(input_data)
 # reshaping the array as we are predicting for one instance
 input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
-# Converting to DataFrame with the same column names as the original data
+# converting to DataFrame with the same column names as the original data
 input_data_df = pd.DataFrame(input_data_reshaped, columns=diabetes_dataset.columns[:-1])
 
 # standardizing the input data
@@ -82,3 +83,14 @@ if (prediction[0] == 0):
   print('The person is not diabetic')
 else:
   print('The person is diabetic')
+
+# saving the trained model
+filename = "diabetes-pred-model.sav"
+
+model_package = {
+    "model": model,
+    "scaler": scaler,
+    "columns": diabetes_dataset.columns[:-1].tolist()  # Save column names except 'Outcome'
+}
+
+pickle.dump(model_package, open(filename, 'wb'))
