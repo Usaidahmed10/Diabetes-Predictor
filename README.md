@@ -28,11 +28,15 @@ pip install -r requirements.txt
 ```
 
 ### 3. Train the Model
-1. Run the `predictor.py` file to preprocess the data and train the SVM model:
+#Option 1: Train the Model Yourself
+Run the predictor.py file to preprocess the data and train the SVM model:
    ```bash
    python predictor.py
    ```
-2. This will generate a file named `diabetes-pred-model.sav` containing the trained model.
+This will generate a file named diabetes-pred-model.sav containing the trained model.
+#Option 2: Download the Pre-trained Model
+Save the pre-trained .sav file directly from this link: Download Model.
+Place the downloaded diabetes-pred-model.sav file in the same directory as web_app.py.
 
 ### 4. Run the Web App
 1. Open the `web_app.py` file to launch the Streamlit app:
