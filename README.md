@@ -1,4 +1,4 @@
-```markdown
+
 # Diabetes Prediction System
 
 This project is a **Diabetes Prediction System** built using **Python**, **Streamlit**, and **Scikit-learn**. It leverages a **Support Vector Machine (SVM)** model to predict whether a person is diabetic based on various health metrics.
